@@ -1,0 +1,14 @@
+FROM agrigorev/model-2025-hairstyle:v1
+
+WORKDIR /var/task
+
+ENV TARGET_WIDTH=200
+ENV TARGET_HEIGHT=200
+ENV IMAGENET_NORM=1
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY hair_infer.py lambda_function.py ./
+
+CMD ["lambda_function.lambda_handler"]
