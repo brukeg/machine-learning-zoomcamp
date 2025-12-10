@@ -9,10 +9,13 @@ numpy = "<3,>=1.26"
 flask = "*"
 gunicorn = "*"
 boto3 = "*"
-onnxruntime = "*"
 pillow = "*"
 requests = "*"
 ipython = "*"
+fastapi = "*"
+uvicorn = "*"
+onnxruntime = "*"
+keras-image-helper = "*"
 
 [dev-packages]
 
